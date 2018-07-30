@@ -53,6 +53,7 @@ static const int kStateKey;
 
     CGRect keyboardRect = [self convertRect:[[info objectForKey:_UIKeyboardFrameEndUserInfoKey] CGRectValue] fromView:nil];
     if (CGRectIsEmpty(keyboardRect)) {
+        self.keyboardAvoidingState.keyboardVisible = NO;
         return;
     }
     
